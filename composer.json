@@ -1,0 +1,21 @@
+{
+    "name": "aetiv/yii2-crud-trait",
+    "description": "Basic CRUD traits",
+    "keywords": ["extension", "crud", "yii"],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Victor Uzun",
+            "email": "aetiv@mail.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "aetiv\\crudtrait\\": ""
+        }
+    }
+}

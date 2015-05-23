@@ -1,1 +1,1 @@
-# yii2-crud-trait
+# Yii2 CRUD Traits
