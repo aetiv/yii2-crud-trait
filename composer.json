@@ -1,6 +1,6 @@
 {
     "name": "aetiv/yii2-crud-trait",
-    "description": "Basic CRUD traits",
+    "description": "Basic Yii2 CRUD traits",
     "keywords": ["extension", "crud", "yii"],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
