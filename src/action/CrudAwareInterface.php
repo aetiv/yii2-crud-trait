@@ -6,6 +6,9 @@
 
 namespace aetiv\crudtrait\action;
 
+use yii\db\ActiveRecord;
+use yii\db\ActiveRecordInterface;
+
 interface CrudAwareInterface
 {
     /**
