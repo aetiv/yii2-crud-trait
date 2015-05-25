@@ -11,6 +11,10 @@ use yii\data\ActiveDataProvider;
 
 trait IndexTrait
 {
+    /**
+     * Render Index Page
+     * @return string
+     */
     public function actionIndex()
     {
         $model = $this->getSearchModel();

@@ -8,4 +8,9 @@ namespace aetiv\crudtrait\action;
 
 interface UpdateInterface extends CrudAwareInterface
 {
+    /**
+     * Render update view and update the item
+     * @return string
+     */
+    public function actionUpdate();
 }

@@ -11,6 +11,10 @@ use yii\db\ActiveRecord;
 
 trait ReadTrait
 {
+    /**
+     * Render view(view item)
+     * @return string
+     */
     public function actionView()
     {
         /** @var ActiveRecord $model */

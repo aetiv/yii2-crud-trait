@@ -15,6 +15,10 @@ use yii\db\ActiveRecord;
  */
 trait CreateTrait
 {
+    /**
+     * Create item
+     * @return string
+     */
     public function actionCreate()
     {
         /** @var ActiveRecord $model */

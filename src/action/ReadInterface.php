@@ -8,4 +8,9 @@ namespace aetiv\crudtrait\action;
 
 interface ReadInterface extends CrudAwareInterface
 {
+    /**
+     * Render view(view item)
+     * @return string
+     */
+    public function actionView();
 }

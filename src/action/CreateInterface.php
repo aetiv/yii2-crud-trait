@@ -8,4 +8,9 @@ namespace aetiv\crudtrait\action;
 
 interface CreateInterface extends CrudAwareInterface
 {
+    /**
+     * Create item
+     * @return string
+     */
+    public function actionCreate();
 }

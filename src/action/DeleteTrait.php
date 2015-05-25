@@ -12,6 +12,10 @@ use yii\db\ActiveRecord;
 
 trait DeleteTrait
 {
+    /**
+     * Delete row and redirect to index
+     * @return string
+     */
     public function actionDelete()
     {
         /** @var ActiveRecordInterface|ActiveRecord $model */

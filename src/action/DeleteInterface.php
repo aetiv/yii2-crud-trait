@@ -10,4 +10,9 @@ namespace aetiv\crudtrait\action;
 
 interface DeleteInterface extends CrudAwareInterface
 {
+    /**
+     * Delete row and redirect to index
+     * @return string
+     */
+    public function actionDelete();
 }

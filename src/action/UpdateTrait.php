@@ -15,7 +15,10 @@ use yii\db\ActiveRecord;
  */
 trait UpdateTrait
 {
-
+    /**
+     * Render update view and update the item
+     * @return string
+     */
     public function actionUpdate()
     {
         /** @var ActiveRecord $model */

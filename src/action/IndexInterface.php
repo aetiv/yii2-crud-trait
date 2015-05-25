@@ -8,6 +8,9 @@
 
 namespace aetiv\crudtrait\action;
 
+use yii\db\ActiveRecord;
+use yii\db\ActiveRecordInterface;
+
 interface IndexInterface
 {
     /**
@@ -15,4 +18,10 @@ interface IndexInterface
      * @return ActiveRecordInterface|ActiveRecord
      */
     public function getSearchModel();
+
+    /**
+     * Render Index Page
+     * @return string
+     */
+    public function actionIndex();
 }
