@@ -4,7 +4,7 @@
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 
-namespace aetiv\crudtrait;
+namespace aetiv\crudtrait\action;
 
 use Yii;
 use yii\db\ActiveRecord;
@@ -24,16 +24,7 @@ trait CreateTrait
             $model->scenario = 'create';
         }
 
-        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->save()) {
-            $this->view->params['menuControl'] = [
-                'back' => [
-                    'visible' => true,
-                ],
-                'change-admin-lang' => [
-                    'visible' => true
-                ]
-            ];
-
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         } else {
             return $this->render('create', [

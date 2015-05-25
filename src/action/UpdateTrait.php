@@ -4,7 +4,7 @@
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 
-namespace aetiv\crudtrait;
+namespace aetiv\crudtrait\action;
 
 use Yii;
 use yii\db\ActiveRecord;
@@ -32,17 +32,9 @@ trait UpdateTrait
 
         $id = Yii::$app->request->get($pk);
         $model = $model->findOne($id);
-        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         } else {
-            $this->view->params['menuControl'] = [
-                'back' => [
-                    'visible' => true,
-                ],
-                'change-admin-lang' => [
-                    'visible' => true,
-                ]
-            ];
             return $this->render('update', [
                 'model' => $model,
             ]);

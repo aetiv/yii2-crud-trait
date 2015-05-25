@@ -4,21 +4,20 @@
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 
-namespace aetiv\crudtrait;
+namespace aetiv\crudtrait\action;
 
 use Yii;
-use yii\db\ActiveRecordInterface;
 use yii\db\ActiveRecord;
 
-trait DeleteTrait
+trait ReadTrait
 {
-    public function actionDelete()
+    public function actionView()
     {
-        /** @var ActiveRecordInterface|ActiveRecord $model */
+        /** @var ActiveRecord $model */
         $model = $this->getModel();
         $scenarios = $model->scenarios();
-        if (isset($scenarios['delete'])) {
-            $model->scenario = 'delete';
+        if (isset($scenarios['update'])) {
+            $model->scenario = 'update';
         }
 
         $pk = 'id';
@@ -27,7 +26,9 @@ trait DeleteTrait
         }
 
         $id = Yii::$app->request->get($pk);
-        $model->findOne($id)->delete();
-        return $this->redirect(['index']);
+
+        return $this->render('view', [
+            'model' => $model->findOne($id),
+        ]);
     }
 }
